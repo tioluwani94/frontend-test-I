@@ -23,13 +23,17 @@ body {
 main {
     width: 100%;
 }
+:root {
+    --sidebar-one-bg: #222c3c;
+    --sidebar-two-bg: #1d2531;
+}
 
 .drawer-one {
     position: fixed;
     z-index: 10;
     width: 240px;
     height: 100%;
-    background-color: #222c3c;
+    background-color: var(--sidebar-one-bg);
     border-color: #E7E7E9;
     transition: all 0.3s ease;
     transform: translateX(-400px);
@@ -41,33 +45,70 @@ main {
 }
 
 .drawer-one .drawer-one-nav-container {
-    padding: 40px 0;
+    padding: 24px 30px;
 }
 
-.drawer-one-nav-list li a {
-    padding: 15px 20px;
-    display: block;
-    color: #fff;
-    font-size: 16px;
+.drawer-one-nav-list {
+    padding-bottom: 16px;
+    border-bottom: 1px solid #2a3547;
+}
+
+.drawer-one-nav-list:last-of-type {
+    border-bottom: none;
+}
+
+.drawer-one-nav-list .heading {
+    padding-top: 0;
+    padding-bottom: 8px;
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    color: #5b6779;
+    font-size: 12px;
+}
+
+.drawer-one-nav-list .heading > p {
+    margin: 0;
+}
+
+.drawer-one-nav-list .heading .icon-container {
+    display: flex;
+    align-items: flex-start;
+}
+
+.drawer-one-nav-list .icon-container > img {
+    width: 13px;
+}
+
+.drawer-one-nav-list .drawer-one-nav-item,
+.drawer-one-nav-list .drawer-one-nav-item__with-icon {
+    padding: 8px 0;
+}
+
+.drawer-one-nav-list .drawer-one-nav-item a {
+    display: flex;
+    justify-content: space-between;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
     font-weight: 300;
     text-decoration: none;
 }
 
-.drawer-one-nav-list li a:hover {
-    background: rgba(46, 56, 70, 0.58);
+.drawer-one-nav-list .drawer-one-nav-item__with-icon a {
+    display: flex;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    font-weight: 300;
+    text-decoration: none;
 }
 
-.drawer-one-nav-list li a i {
-    width: 15px;
-    height: 15px;
-    margin-right: 5px;
-    line-height: 10px;
+.drawer-one-nav-list .drawer-one-nav-item__with-icon img {
+    padding-right: 8px;
 }
 
-.drawer-one-nav-list li.active {
-    background: rgba(46, 56, 70, 0.58);
+.drawer-one-nav-list .drawer-one-nav-item a.active {
+    color: rgba(255, 255, 255, 1);
 }
-
 
 .drawer-two {
     position: fixed;
@@ -75,7 +116,7 @@ main {
     width: 100px;
     height: 100%;
     padding: 20px;
-    background-color: #1d2531;
+    background-color: var(--sidebar-two-bg);
     transition: all 0.3s ease;
     transform: translateX(-400px);
 }
