@@ -26,6 +26,8 @@ main {
 :root {
     --sidebar-one-bg: #222c3c;
     --sidebar-two-bg: #1d2531;
+    --white-color: #ffffff;
+    --nav-link-color: #b7c0cd;
 }
 
 .drawer-one {
@@ -88,7 +90,7 @@ main {
 .drawer-one-nav-list .drawer-one-nav-item a {
     display: flex;
     justify-content: space-between;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--nav-link-color);
     font-size: 12px;
     font-weight: 300;
     text-decoration: none;
@@ -96,7 +98,7 @@ main {
 
 .drawer-one-nav-list .drawer-one-nav-item__with-icon a {
     display: flex;
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--nav-link-color);
     font-size: 12px;
     font-weight: 300;
     text-decoration: none;
@@ -107,7 +109,7 @@ main {
 }
 
 .drawer-one-nav-list .drawer-one-nav-item a.active {
-    color: rgba(255, 255, 255, 1);
+    color: var(--white-color);
 }
 
 .drawer-two {
@@ -137,6 +139,49 @@ main {
     flex: 1;
 }
 
+.goals {
+    position: absolute;
+    bottom: 20px;
+    width: 75%;
+}
+
+.goals-amount {
+    display: flex;
+    justify-content: space-between;
+}
+
+.goals-amount p {
+    margin-bottom: 2px;
+    font-size: 12px;
+    color: var(--white-color);
+}
+
+.goals-progress {
+    display: flex;
+    height: 4px;
+    overflow: hidden;
+    background-color: #2d3848;
+    border-radius: 2px;
+}
+
+.goals-progress:after {
+    display: block;
+    clear: both;
+    content: "";
+}
+
+.goals-progress__bar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 40px;
+    text-align: center;background-image: linear-gradient(to left, #7d5be2, #9d8fe3);
+    transition: width .6s ease;
+}
+
+#goals__total-amount {
+    color: #eff3f6;
+}
 
 .main-content {
     width: 100%;
