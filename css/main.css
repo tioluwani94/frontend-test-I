@@ -28,6 +28,9 @@ main {
     --sidebar-two-bg: #1d2531;
     --white-color: #ffffff;
     --nav-link-color: #b7c0cd;
+    --pale-grey-three: #e6eaee;
+    --azure: #1a91eb;
+    --blue-grey: #7f8fa4;
 }
 
 .drawer-one {
@@ -193,15 +196,76 @@ main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
     position: fixed;
     z-index: 5;
     width: 100%;
-    padding: 24px 30px;
+    padding: 20px 30px;
     background-color: #fff;
 }
 
 .header-one .page-title {
+    margin: 0;
     display: inline;
+    font-size: 24px;
+    color: #354052;
+}
+
+.header-dropdown {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+}
+
+.account-info-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.avatar-container .avatar {
+    width: 50px;
+}
+
+.avatar-container .online-sign {
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+
+.account-info {
+    position: relative;
+    padding-left: 8px;
+}
+
+.account-info .user-name {
+    margin: 0;
+    padding-bottom: 4px;
+    color: var(--azure);
+    font-size: 16px;
+}
+
+.account-info .user-role {
+    margin: 0;
+    font-size: 14px;
+    color: var(--blue-grey);
+}
+
+.header-two {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: var(--sidebar-two-bg);
+    box-shadow: 0 -1px 0 0 var(--pale-grey-three);
 }
 
 .content-area {
