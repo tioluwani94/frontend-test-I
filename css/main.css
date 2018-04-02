@@ -239,9 +239,25 @@ main {
 
 .header-one .page-title {
     margin: 0;
-    display: inline;
+    display: flex;
+    align-items: center;
     font-size: 24px;
     color: #354052;
+}
+
+.header-one .page-title .hamburger-btn {
+    background: transparent;
+    border: none;
+    margin-right: 8px;
+    display: none;
+}
+
+.header-one .page-title .hamburger-btn:hover {
+    cursor: pointer;
+}
+
+.header-one .page-title .hamburger-btn:focus {
+    outline: none;
 }
 
 .header-dropdown {
@@ -377,7 +393,6 @@ main {
     border-radius: 4px;
     height: 100%;
     width: 100%;
-    overflow: auto;
     background: var(--white-color);
     display: flex;
     overflow: hidden;
@@ -419,7 +434,6 @@ main {
 .content-area-container .left-section .content__left-section {
     margin-right: 32px;
 }
-
 
 .dept-sales__information .dept-sales__amount {
     display: flex;
@@ -775,7 +789,7 @@ main {
     border-radius: 3px;
 }
 
-.legend-section > li  {
+.legend-section > li {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -806,6 +820,98 @@ main {
 
 @media screen and (max-width: 559px) {
 
+    .drawer-two {
+        display: none;
+    }
+
+    .header-two {
+        margin-top: 70px;
+        display: block;
+    }
+
+    .header-two .header-two__left {
+        width: 100%;
+    }
+
+    .header-two .header-two__right {
+        width: 100%;
+    }
+
+    .header-two__right .icons-section {
+        display: none;
+    }
+
+    .header-two__right .metrics-section {
+        width: 100%;
+        padding: 0;
+    }
+
+    .header-dropdown {
+        width: 50%;
+    }
+
+    .content-area {
+        padding: 30px 15px;
+        overflow: scroll;
+    }
+
+    .content-area-container {
+        margin-top: 180px;
+        display: block;
+        overflow: auto;
+    }
+
+    .content-area-container .left-section,
+    .content-area-container .right-section {
+        width: 100%;
+    }
+
+    .content-area-container .left-section .header {
+        display: block;
+    }
+
+    .content-area-container .left-section .dept-sales__information {
+        width: 100%;
+    }
+
+    .content-area-container .left-section .content {
+        display: block;
+    }
+
+    .content-area-container .left-section .content__left-section {
+        margin-right: 0;
+    }
+
+    .content-area-container .left-section .skill-group-bar {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+    .legend-section {
+        display: block;
+    }
+
+    .legend-section > li {
+        justify-content: start;
+    }
+
+    .download-btn, .send-btn {
+        display: block;
+        width: 100%;
+    }
+
+    .send-btn {
+        margin-bottom: 8px;
+    }
+
+    .header-one .page-title .hamburger-btn {
+        display: block;
+    }
+
+    .goals {
+        bottom: -40px;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -834,6 +940,65 @@ main {
 
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 600px) and (max-width: 1170px) {
 
+    .content-area-container {
+        display: block;
+        overflow: auto;
+    }
+    .content-area-container .left-section,
+    .content-area-container .right-section {
+        width: 100%;
+    }
+
+    .content-area-container .left-section .content {
+        display: block;
+    }
+
+    .content-area-container .left-section .header {
+        display: block;
+    }
+
+    .content-area-container .left-section .dept-sales__information {
+        width: 100%;
+    }
+
+    .content-area-container .left-section .skill-group-bar {
+        position: relative;
+        width: 100%;
+        display: block;
+    }
+
+    .content-area-container .left-section .content__left-section {
+        margin-right: 0;
+    }
+
+    .header-dropdown {
+        width: 50%;
+    }
+
+    .header-two__right .icons-section {
+        display: none;
+    }
+
+    .header-two__right .metrics-section {
+        width: 100%;
+        padding: 0;
+    }
+    .legend-section {
+        display: block;
+    }
+
+    .legend-section > li {
+        justify-content: start;
+    }
+
+    .download-btn, .send-btn {
+        display: block;
+        width: 100%;
+    }
+
+    .send-btn {
+        margin-bottom: 8px;
+    }
 }
