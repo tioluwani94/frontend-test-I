@@ -334,6 +334,11 @@ main {
     align-items: center;
 }
 
+.header-two__right .icons-section #attachments {
+    position: relative;
+    top: 4px;
+}
+
 .header-two__right .metrics-section {
     text-align: center;
     width: 60%;
