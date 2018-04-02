@@ -117,9 +117,13 @@ main {
     padding: 8px 0;
 }
 
-.drawer-one-nav-list .drawer-one-nav-item a {
+.drawer-one-nav-list .drawer-one-nav-item {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+
+.drawer-one-nav-list .drawer-one-nav-item a {
     color: var(--nav-link-color);
     font-size: 12px;
     font-weight: 300;
@@ -376,6 +380,7 @@ main {
     overflow: auto;
     background: var(--white-color);
     display: flex;
+    overflow: hidden;
 }
 
 .content-area-container .left-section {
