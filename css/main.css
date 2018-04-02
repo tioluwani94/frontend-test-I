@@ -50,6 +50,9 @@ main {
     --blue-grey: #7f8fa4;
     --dark-grey-blue: #354052;
     --green-color: #299817;
+    --light-green: #38ba24;
+    --red-color: #d54642;
+    --orange-color: #ff7800;
 }
 
 .list-unstyled {
@@ -371,14 +374,79 @@ main {
 }
 
 .content-area-container .left-section {
-    width: 60%;
-    padding: 24px 30px 73px;
+    width: 65%;
     background-color: var(--white-color);
 }
 
-.content-area-container .right-section {
+.content-area-container .left-section .header {
+    display: flex;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--pale-grey-three);
+}
+
+.content-area-container .left-section .dept-sales__information {
+    position: relative;
     width: 40%;
-    padding: 24px 30px 73px;
+}
+
+.content-area-container .left-section .skill-group-bar {
+    position: relative;
+    width: 60%;
+}
+
+.content-area-container .header .skill-bar {
+    width: 12px;
+    height: 38px;
+}
+
+.content-area-container .left-section .content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+}
+
+.content-area-container .left-section .content__left-section {
+    margin-right: 32px;
+}
+
+
+.dept-sales__information .dept-sales__amount {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.dept-sales__information > p {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: var(--blue-grey);
+}
+
+.dept-sales__amount p,
+.sales-total p {
+    margin-bottom: 0;
+}
+
+.dept-sales__amount p:first-of-type {
+    margin-bottom: 0;
+    padding-right: 8px;
+    font-size: 24px;
+    color: var(--dark-grey-blue);
+    border-right: 1px solid #e7e9ed;
+}
+
+.dept-sales__amount p:last-of-type {
+    margin-bottom: 0;
+    padding-left: 8px;
+    color: var(--green-color);
+    font-size: 24px;
+}
+
+.content-area-container .right-section {
+    width: 35%;
+    padding: 24px 14px;
     background-color: #fafbfc;
 }
 
@@ -531,7 +599,7 @@ main {
     justify-content: center;
     width: 270px;
     text-align: center;
-    background-color: #38ba24;
+    background-color: var(--light-green);
     transition: width .6s ease;
 }
 
@@ -565,7 +633,6 @@ main {
 }
 
 .sales-reports .action-buttons .download-btn {
-    margin-left: 4px;
     border-radius: 4px;
     background-image: linear-gradient(to bottom, #39b54a, #34aa44);
     border: solid 1px #249533;
@@ -588,6 +655,143 @@ main {
     align-self: flex-start;
     position: relative;
     top: 2px;
+}
+
+.skill-group-bar {
+    position: relative;
+    display: flex;
+}
+
+.skill-bar {
+    display: inline;
+    position: relative;
+    padding-left: 8px;
+    margin: 0 1px 0 1px;
+    border-radius: 2px;
+}
+
+.skill-bar.orange {
+    background-color: var(--orange-color);
+}
+
+.skill-bar.red {
+    background-color: var(--red-color);
+}
+
+.skill-bar.green {
+    background-color: var(--light-green);
+}
+
+.skill-bar.grey {
+    background-color: #96a3b7;
+}
+
+.skill-bar.light {
+    background-color: #e2e7ee;
+}
+
+.user-percentage.green {
+    color: var(--light-green);
+}
+
+.user-percentage.orange {
+    color: var(--orange-color);
+}
+
+.user-percentage.red {
+    color: var(--red-color);
+}
+
+.user-information .skill-group-bar {
+    width: 12px;
+    height: 14px;
+}
+
+.user-information .information-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.information-section .user-avatar__name__role {
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+.user-avatar__name__role .user-avatar__container {
+    width: 20%;
+    padding-right: 8px;
+}
+
+.user-avatar__container img {
+    width: 100%;
+}
+
+.user-avatar__name__role .user__name__role p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.user__name__role p:first-of-type {
+    color: var(--dark-grey-blue);
+}
+
+.user__name__role p:last-of-type {
+    color: var(--blue-grey);
+}
+
+.user-miscellaneous {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 8px;
+}
+
+.user-miscellaneous p {
+    font-size: 14px;
+    color: var(--blue-grey);
+}
+
+.legend-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 30px;
+}
+
+.legend-section .legend {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.legend-section > li  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.legend-section > li > p {
+    margin: 0;
+    padding-left: 3px;
+    font-size: 14px;
+    color: var(--dark-grey-blue);
+}
+
+.legend-section .green {
+    background: var(--light-green);
+}
+
+.legend-section .red {
+    background: var(--red-color);
+}
+
+.legend-section .orange {
+    background: var(--orange-color);
+}
+
+.legend-section .grey {
+    background: #96a3b7;
 }
 
 @media screen and (max-width: 559px) {
